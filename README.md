@@ -1,15 +1,38 @@
-# AutoPromptFill
-AutoPromptFill is a powerful Chrome extension designed to enhance your productivity with [ChatGPT](https://chat.openai.com). This tool automatically fills prompts that you've created using the [Prompt Toolbox](https://prompttoolbox.com). Now you can quickly fill your prompts without the hassle, freeing up your time for more creative work.
+# Prompt-Toolbox-To-Chat-Gpt-Extension
 
-![Screenshot of AutoPromptFill in action](https://autopromptfill.com/apf-screenshot.png)
+Prompt-Toolbox-To-Chat-Gpt-Extension is a Chrome extension that streamlines your interaction with [PromptToolbox](https://prompttoolbox.com) and [ChatGPT](https://chat.openai.com). It swiftly auto-fills your ChatGPT prompts using resources from PromptToolbox and more.
 
-## How to Use
-1. Download and extract the repository into a new folder.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Ensure that "Developer mode" (top right toggle) is turned ON.
-4. Click "Load unpacked" (top left) and select the folder containing AutoPromptFill files.
+## Features
 
-The new "autofill" button will AUTOMATICALLY appear on [Prompt Toolbox](https://PromptToolbox.com) next to the existing "copy to clipboard" button when you view a prompt.
+- Automatically open a new ChatGPT window with the prompt filled when clicking the extension button on PromptToolbox prompts.
+- When navigating to ChatGPT with a `prompt` query parameter in the URL, the extension will automatically fill the ChatGPT prompt input with the given prompt.
+- Includes a popup with 'Clear Text' and 'Copy All Text' buttons for added convenience.
 
-## TODO
-Once more testing and bug fixing are done, I will submit it to the Chrome Store for easier installation and updates.
+## Usage
+
+To use the extension:
+
+1. Visit [PromptToolbox](https://prompttoolbox.com) and look for a prompt.
+2. Click the extension button beside the desired prompt.
+3. A new ChatGPT window will open with the prompt filled.
+
+Or:
+
+1. Visit [ChatGPT](https://chat.openai.com) with a URL formatted like this: `https://chat.openai.com/?prompt=Your%20Prompt%20Here`
+2. The prompt input will be automatically filled with "Your Prompt Here".
+
+## Installation
+
+The extension can be installed manually by loading the unpacked extension into Chrome.
+
+1. Clone or download this repository.
+2. Navigate to `chrome://extensions` in your Chrome browser.
+3. Enable 'Developer mode' at the top-right corner.
+4. Click 'Load unpacked' at the top-left corner.
+5. Navigate to the directory where you saved this repository and click 'Select'.
+
+You're good to go!
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
