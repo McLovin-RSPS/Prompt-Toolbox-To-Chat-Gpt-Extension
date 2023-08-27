@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Prompt-Toolbox-To-Chat-Gpt-Extension",
+  "name": "AutoPromptFill",
   "short_name": "APF",
   "version": "1.0.1",
-  "description": "Prompt-Toolbox-To-Chat-Gpt-Extension: Swiftly auto-fill your ChatGPT prompts using PromptToolbox and more.",
-  "permissions": ["https://prompttoolbox.com/*", "https://chat.openai.com/*"],
+  "description": "AutoPromptFill: Swiftly auto-fill your ChatGPT prompts using PromptToolbox and more.",
+  "permissions": ["https://prompttoolbox.com/*", "https://chat.openai.com/*", "storage"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

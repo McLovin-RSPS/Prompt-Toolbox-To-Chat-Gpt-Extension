@@ -12,13 +12,13 @@ function extractPrompts() {
   return prompts;
 }
 
-// Store the extracted prompts in Chrome storage
+// Store the extracted prompts using message passing
 function storePrompts(prompts) {
-  chrome.storage.local.set({ "prompts": prompts });
+  chrome.runtime.sendMessage({ action: "storePrompts", data: prompts });
 }
 
 // Send prompts to Chat GPT one by one
-function relayToChatGPT() {
+function relayToChatGPT(prompts) {
   let regenerateButtonSelector = 'button.btn-neutral';
   let promptIndex = 0;
 
@@ -60,9 +60,9 @@ function main() {
     let prompts = extractPrompts();
     storePrompts(prompts);
   } else if (window.location.host === "chat.openai.com") {
-    chrome.storage.local.get(["prompts"], function (result) {
-      if (result.prompts) {
-        relayToChatGPT(result.prompts);
+    chrome.runtime.sendMessage({ action: "getPrompts" }, function(response) {
+      if (response && response.prompts) {
+        relayToChatGPT(response.prompts);
       }
     });
   }
